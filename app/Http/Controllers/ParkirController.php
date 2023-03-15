@@ -26,6 +26,12 @@ class ParkirController extends Controller
         try {
             $parkirs = Parkir::all();
 
+            $parkirs->map(function ($parkir) {
+                $parkir->created_at = Carbon::createFromFormat('Y-m-d H:i:s', $parkir->created_at, 'Asia/Jakarta')->format('Y-m-d H:i:s');
+                // $parkir->waktu_keluar = Carbon::createFromFormat('Y-m-d H:i:s', $parkir->waktu_keluar, 'Asia/Jakarta');
+                return $parkir;
+            });
+
             return response()->json([
                 'message' => 'success',
                 'data' => $parkirs,
@@ -67,7 +73,7 @@ class ParkirController extends Controller
     public function getByDateRange(Request $req, $startDate, $endDate)
     {
         try {
-            $parkirs = Parkir::whereBetween('created_date', [$startDate, $endDate])->get();
+            $parkirs = Parkir::whereBetween('created_at', [$startDate, $endDate])->get();
 
             return response()->json([
                 'message' => 'success',

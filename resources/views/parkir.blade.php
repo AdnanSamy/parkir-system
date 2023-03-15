@@ -16,8 +16,7 @@
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                            class="fas fa-bars"></i></a>
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
 
@@ -34,8 +33,7 @@
 
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-                style="opacity: .8">
+            <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">Parkir System</span>
         </a>
 
@@ -66,6 +64,9 @@
             <section class="content">
                 <div class="card p-2">
                     <div class="row m-2">
+                        <div class="col-4">
+                            <input type="text" id="dateRange" class="form-control">
+                        </div>
                         <button class="btn btn-primary ml-auto" id="btnNew">New</button>
                     </div>
                     <table class="table table-border mt-2" id="main_table">
@@ -92,8 +93,7 @@
             </div>
         </footer>
 
-        <div class="modal fade" id="modalParkir" data-backdrop="static" data-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="modalParkir" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">

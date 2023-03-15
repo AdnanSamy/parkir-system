@@ -10,4 +10,14 @@ class Parkir extends Model
     use HasFactory;
 
     protected $table = "parkir";
+
+    public function setCreatedAt($value)
+    {
+        $this->attributes['created_at'] = $value;
+    }
+
+    public function setWaktuKeluar($value)
+    {
+        $this->attributes['waktu_keluar'] = $value;
+    }
 }
